@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 2.32.4
+
+* Fix process detection, by adding `kill` syscall with signal `0` to system-probe seccomp profile.
+
 ## 2.32.3
 
 * Fix Go CPU profiling, by adding `setitimer` to system-probe seccomp profile.
