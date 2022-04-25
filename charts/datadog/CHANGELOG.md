@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 2.32.6
+
+* Add `verticalpodautoscalers` into `kubernetes_state_core` template collectors.
+
 ## 2.32.5
 
 * Fix process detection, by adding `kill` syscall with signal `0` to system-probe seccomp profile.

@@ -9,25 +9,26 @@ kubernetes_state_core.yaml.default: |-
 {{- if .Values.datadog.kubeStateMetricsCore.collectSecretMetrics }}
       - secrets
 {{- end }}
-      - nodes
-      - pods
-      - services
-      - resourcequotas
-      - replicationcontrollers
-      - limitranges
-      - persistentvolumeclaims
-      - persistentvolumes
-      - namespaces
-      - endpoints
+      - cronjobs
       - daemonsets
       - deployments
-      - replicasets
-      - statefulsets
-      - cronjobs
-      - jobs
+      - endpoints
       - horizontalpodautoscalers
+      - jobs
+      - limitranges
+      - namespaces
+      - nodes
+      - persistentvolumeclaims
+      - persistentvolumes
       - poddisruptionbudgets
+      - pods
+      - replicasets
+      - replicationcontrollers
+      - resourcequotas
+      - services
+      - statefulsets
       - storageclasses
+      - verticalpodautoscalers
       - volumeattachments
 {{- if .Values.datadog.kubeStateMetricsCore.useClusterCheckRunners }}
       skip_leader_election: true
